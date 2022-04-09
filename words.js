@@ -1181,7 +1181,9 @@ var word = WORDS[random];
 var wordDiv = document.getElementById('word');
 var meaningDiv = document.getElementById('meaning');
 
-wordDiv.innerHTML = word[0];
+var linkStr = "https://www.google.com/search?q=define+"+word[0];
+// wordDiv.innerHTML = word[0];
+wordDiv.innerHTML = "<a href="+linkStr+">"+word[0]+"</a>";
 meaningDiv.innerHTML = word[1];
 
 

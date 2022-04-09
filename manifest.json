@@ -10,9 +10,7 @@
     "chrome_url_overrides" : {
         "newtab": "newtab.html"
     },
-    "background": {
-     "service_worker": "background.js"
-    },
+    "background": {},
     "short_name": "GRE New tab", 
     "author": "Rohit Gandhi"
 }

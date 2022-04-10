@@ -1,3 +1,11 @@
+/* 
+List of words and their meanings, sorted in alphabetical 
+order. A word is chosen at random from this list and 
+displayed on new tab page. If you would like to suggest 
+fixes, Add more words, fix punctuation etc., feel free
+to send me a pull request.
+*/
+
 var WORDS = [
 ["Abacus", " Frame With Balls For Calculating"],
 ["Abate", " To Lessen To Subside "],
@@ -1170,18 +1178,3 @@ var googleSearchStr = "https://www.google.com/search?q=define+"+word[0];
 document.getElementById('word').innerHTML = "<a href="+googleSearchStr+">"+word[0]+"</a>";
 // Display Description
 document.getElementById('meaning').innerHTML = word[1];
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

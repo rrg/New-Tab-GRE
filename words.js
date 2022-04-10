@@ -1163,28 +1163,13 @@ var WORDS = [
 ["Yarn", " Tale Story Fibers For Knitting"]
 ];
 
+var word = WORDS[Math.floor(Math.random() * WORDS.length)];
+var googleSearchStr = "https://www.google.com/search?q=define+"+word[0];
 
-
-
-
-
-
-
-
-
-
-var length = WORDS.length;
-var random = Math.floor(Math.random() * length);
-
-var word = WORDS[random];
-
-var wordDiv = document.getElementById('word');
-var meaningDiv = document.getElementById('meaning');
-
-var linkStr = "https://www.google.com/search?q=define+"+word[0];
-// wordDiv.innerHTML = word[0];
-wordDiv.innerHTML = "<a href="+linkStr+">"+word[0]+"</a>";
-meaningDiv.innerHTML = word[1];
+// Display Word
+document.getElementById('word').innerHTML = "<a href="+googleSearchStr+">"+word[0]+"</a>";
+// Display Description
+document.getElementById('meaning').innerHTML = word[1];
 
 
 

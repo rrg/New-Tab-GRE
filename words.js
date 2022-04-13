@@ -5,7 +5,8 @@ displayed on new tab page. If you would like to suggest
 fixes, Add more words, fix punctuation etc., feel free
 to send me a pull request.
 */
-var dataset =
+
+var wordlist =
 [
 {word:"aberrant",
 type:"(adjective)",
@@ -5352,12 +5353,4 @@ type:"(noun)",
 meaning:"spirit of the times",
 usage:"Each decade has its own zeitgeist--the 1990's was a prosperous time in which the promise of the American Dream never seemed more palpable."
 }
-]
-
-var data = dataset[Math.floor(Math.random() * dataset.length)];
-var googleSearchStr = "https://www.google.com/search?q=define+"+data.word;
-
-// Display Word
-document.getElementById('word').innerHTML = "<a href="+googleSearchStr+">"+data.word+"</a>";
-// Display Description
-document.getElementById('meaning').innerHTML = data.type+" "+data.meaning;
+];

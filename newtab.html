@@ -33,20 +33,48 @@
         top:30%;
         position: absolute;
         text-align: center;
+    }    
+    #texwrapper {
+        max-width: 900px;
+        top:30%;
+        text-align: center;
+        margin:0 auto;
+
     }
     #word{
-        padding: 20px;
-        font-size: 65px;
+        padding: 10px;
+        font-size: 55px;
         color:  black;
         text-decoration: none;
+        display: inline-block;
+    }
+    #type{
+        padding: 5px;
+        font-size: 18px;
+        color:  black;
+        text-decoration: none;
+        display: inline-block;
+        color:#888;
     }
     #meaning{
         padding: 20px;
-        font-size: 32px;
-        padding-bottom: 50px;
-    }
-    #footer{
+        font-size: 25px;
+        padding-bottom: 10px;
+    }    
+    #usage{
+        padding: 20px;
         font-size: 20px;
+        opacity: 0;
+        font-style: italic;
+        color:#444;
+    }
+    .animatee {
+       opacity: 1 !important;
+       transition: opacity 2.6s ease 1.3s;
+    }
+
+    #footer{
+        font-size: 15px;
         position: fixed;
         bottom:20px;
         right:20px;
@@ -54,57 +82,25 @@
     #footer,#footer a{
         color:#222;
     }
-
-    /*SearchBox*/
-    .bar{
-      margin:0 auto;
-      width:475px;
-      border-radius:10px;
-      border:1px solid #dcdcdc;
-    }
-    .bar:hover{
-      box-shadow: 1px 1px 8px 1px #dcdcdc;
-    }
-    .bar:focus-within{
-      box-shadow: 1px 1px 8px 1px #dcdcdc;
-      outline:none;
-    }
-    .searchbar{
-      height:65px;
-      border:none;
-      width:390px;
-      font-size:24px;
-      outline: none;
-      color:#767676;
-    }
-    .searchicon {
-        height: 20px;
-        width: 20px;
-        display:  inline-block;
-        margin-left: -20px;
-    }
 </style>
+<script src="words.js"></script>
 </head>
 
 <body>
 <div id="background"></div>
 <div id="content">
+<div id="texwrapper">
 <div id="word">.</div>
+<div id="type">.</div>
 <div id="meaning">.</div>
-<!-- SearchBox -->
-<form action="https://google.com/search" method="get">
-    <div class="bar">
-    <div class="searchicon"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></div>
-    
-      <input autofocus="autofocus" class="searchbar" type="text" name="q">
-    </div>
-</form>
-<!--  -->
+<div id="usage"></div>
+</div>
+</div>
 <div id="footer">
     <a href="https://chrome.google.com/webstore/detail/gre-words-new-tab/bkddfbmbmeokaebfmhacebieokjggaoh">Give Feedback<a> &nbsp &nbsp
     <a href="https://github.com/rrg/New-Tab-GRE/blob/main/words.js">Suggest Fixes<a> &nbsp &nbsp
 </div>
 
-<script src="./words.js"></script>
+<script src="./script.js"></script>
 </body>
 </html>
